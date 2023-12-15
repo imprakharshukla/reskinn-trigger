@@ -1,9 +1,11 @@
 services:
   - type: web
-    name: trigger-v2-render-demo # Change this to your preferred app name
+    name: reskinn-trigger
     runtime: docker
     dockerfilePath: Dockerfile # This assumes your Dockerfile is in the root directory of your repository
     envVars:
+      - key: WHITELISTED_EMAILS
+        sync: false
       - key: ENCRYPTION_KEY
         sync: false
       - key: MAGIC_LINK_SECRET
